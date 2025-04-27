@@ -1,5 +1,4 @@
 from mininet.net import Mininet
-from mininet.node import Controller
 from mininet.node import OVSKernelSwitch
 from mininet.cli import CLI
 from mininet.log import setLogLevel, info
@@ -13,10 +12,10 @@ class BMv2Switch(OVSKernelSwitch):
         self.switchPath = 'simple_switch'  # BMv2 switch binary
 
 def sfcTopology():
-    net = Mininet(controller=Controller, link=TCLink)
+    net = Mininet(controller=None, link=TCLink)
 
     # Add controller
-    c0 = net.addController('c0')
+    #c0 = net.addController('c0')
 
     # Add BMv2 switch (requires external configuration with P4 program)
     #s1 = net.addSwitch('s1', cls=BMv2Switch, dpid='1')
