@@ -131,14 +131,11 @@ control MyComputeChecksum(inout headers hdr, inout metadata meta) {
 control MyDeparser(packet_out packet, in headers hdr) {
     apply {
         packet.emit(hdr.ethernet);
-        if (hdr.ipv4.isValid()) {
-            packet.emit(hdr.ipv4);
-            if (hdr.sfc.isValid()) {
-                packet.emit(hdr.sfc);
-            }
-        }
+        packet.emit(hdr.ipv4);
+        packet.emit(hdr.sfc);
     }
 }
+
 
 // V1Switch Architecture
 V1Switch(
