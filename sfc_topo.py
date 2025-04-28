@@ -3,6 +3,8 @@ from mininet.node import OVSKernelSwitch
 from mininet.cli import CLI
 from mininet.log import setLogLevel, info
 from mininet.link import TCLink
+from p4runtime_lib.bmv2 import Bmv2Switch
+
 
 
 # Note: Assumes BMv2 switch is configured externally (e.g., via P4 Behavioral Model)
@@ -27,7 +29,8 @@ def sfcTopology():
         dpid='1',
         sw_path='simple_switch_grpc',
         json_path='sfc.json',
-        grpc_port=50051
+        grpc_port=50051,
+        device_id=0
     )
 
 
