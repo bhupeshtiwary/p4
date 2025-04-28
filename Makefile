@@ -37,7 +37,7 @@ start_mininet:
 # Push your P4Runtime rules
 install_rules:
 	@echo "Installing flow rules..."
-	@sudo python3 $(RULES_SCRIPT)
+	@sudo -E python3 $(RULES_SCRIPT)
 
 # Kick off echo servers, tcpdump, send test packet, then clean up
 run_demo:
