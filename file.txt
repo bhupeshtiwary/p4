@@ -1,3 +1,42 @@
+Objective:
+The purpose of this assignment is to explore the power of programmable data planes using
+the P4 language to solve limitations of traditional fixed-function networking devices. The
+assignment involves identifying a networking scenario(sample use cases given),
+implementing a P4 program, and demonstrating the solution in a simulated environment
+(e.g., Mininet with BMv2).
+1. Select a Use Case Scenario
+Choose a networking scenario where P4 is beneficial over traditional fixed function packet
+processing (or you can propose your own network scenario). Sample use cases are attached
+at the end of the document.
+2. Design and Implement a P4 Program
+Develop a custom P4_16 program that supports the chosen use case. Your program should
+include:
+- Custom header definitions (if required)
+- Parsing logic for new or modified headers
+- Tables and actions that implement the forwarding or processing behavior
+- Control block logic that integrates everything
+3. Simulate and Test
+Use Mininet + BMv2 + P4Runtime shell or a Python controller to:
+- Run your topology
+- Deploy your P4 program
+- Install flow rules
+- Demonstrate packet flow consistent with your use case
+4. Write a Report
+Prepare a concise report including:
+- The networking challenge addressed
+- Why P4 is beneficial in this context
+- Overview of your P4 program and its logic
+- Results and validation from your test environment
+Deliverables:
+- P4 program (`your_program.p4`)
+- Topology and rule-installation scripts (Mininet + p4runtime-shell)
+- Demonstration outputs (CLI logs, screenshots, or packet captures)
+- Report
+
+
+CODE files:
+
+
 tiwary@Tiwary-QE73456K:~/p4$ ls
 Makefile  echo_service.py  install_rules.py  send_packet.py  sfc.p4  sfc_topo.py
 tiwary@Tiwary-QE73456K:~/p4$ echo echo_service && cat echo_service.py  && echo install_rules && cat install_rules.py  && echo send_packet && cat send_packet.py  && echo sfc && cat sfc.p4 && echo sfc_topo && cat sfc_topo.py && echo Makefile && cat Makefile

@@ -1,9 +1,15 @@
+#!/usr/bin/env python3
+import os, sys
+
+# Ensure Python can find your p4runtime_lib under ~/p4tutorials/utils
+sys.path.insert(0, os.path.expanduser('~/p4tutorials/utils'))
+
 from mininet.net import Mininet
-from mininet.node import OVSKernelSwitch
 from mininet.cli import CLI
 from mininet.log import setLogLevel, info
 from mininet.link import TCLink
 from p4runtime_lib.bmv2 import Bmv2Switch
+
 
 
 
